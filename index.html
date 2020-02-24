@@ -10,6 +10,7 @@
     <!-- import the webpage's stylesheet -->
     <link rel="stylesheet" href="/stylesheet.css">
     <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+    <link rel="stylesheet" media="screen" href="/css/screen_version.css">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://use.typekit.net/gxh7xcj.css">
@@ -17,22 +18,24 @@
     <!-- import the webpage's javascript file -->
     <script src="/script.js" defer></script>
 
-
-
-
-
 </head>
+
+
+
 
 <body>
 
     <!-- Simulate a smartphone / tablet -->
     <div class="mobile-container">
-
         <!-- Top Navigation Menu -->
+
         <div class="topnav">
+
             <div>
-                <div class="wrapper" width="40px"><a href="index.html" class="active">
-                        <img src="Images/Smoothie-Logo.png" width="45px">
+
+                <div class="wrapper"><a href="index.html" class="active">
+                        <img id="smoothie" src="Images/Smoothie-Logo.png" width="45px">
+                        <h1>Different Types of Smoothies</h1>
                     </a></div>
                 <div id="myLinks">
                     <a href="#index" class="active">Home</a>
@@ -52,22 +55,73 @@
         <!-- End smartphone / tablet look -->
 
 
-        <div id="outer-grid">
-            <div>1</div>
-            <div>2</div>
-            <div>3</div>
-            <div id="inner-grid">
-                <div>5</div>
-                <div>6</div>
-                <div>7</div>
-                <div>8</div>
+        <!--        <div id="outer-grid">-->
+        <div class="content-grid">
+
+            <div class="grid-item">
+                <span class="grid-item-text">
+                    This week's favorite smoothies.
+                </span>
+                <br>
+                <a href="WeeklySpecial.html">Strawberry Banana Smoothies</a>
             </div>
+
+            <div class="grid-item">
+                <span class="grid-item-text">
+                    Best Smoothies for your workout.
+                </span>
+                <br>
+                <a href="Workout.html">Peanut Butter Banana Smoothie</a>
+            </div>
+
+            <div class="grid-item">
+                <span class="grid-item-text">
+                    Smoothies that will help you feel great all winter.
+                </span>
+                <br>
+                <a href="WinterSmoothie.html">Mixed Berry Banana Smoothie</a>
+            </div>
+
+            <div class="grid-item">
+                <a href="AllSmoothies.html">All Smoothies</a>
+            </div>
+
+            <div>
+                <a href="Smoothie-1.html" class="grid-link">
+                    <img src="Images/aloha-smoothie.jpg" class="grid-item-image">
+                </a>
+            </div>
+
+            <div>
+                <a href="Smoothie-2.html" class="grid-link">
+                    <img src="Images/healthy-blueberry-banana-smoothie.jpg" class="grid-item-image">
+                </a>
+            </div>
+
+
+
+            <!--
+            <div id="inner-grid">
+                <div><a href="Smoothie-1.html"><img src="Images/aloha-smoothie.jpg" width="100px"></a></div>
+
+                <div><a href="Smoothie-2.html"><img src="Images/healthy-blueberry-banana-smoothie.jpg" width="110px"></a></div>
+
+                
+
+                </div>
+    
+
+
+            </div>
+-->
+
         </div>
     </div>
+
+
+
 
     <!-- BASIC STRUCTURE -->
 
 
-</body>
-
-</html>
+</body></html>

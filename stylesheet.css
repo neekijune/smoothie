@@ -1,119 +1,326 @@
-/* Style the navigation menu */
-.topnav {
-    overflow: hidden;
-    background-color: #333;
-    position: relative;
-}
+ body {
+     font-family: Arial, Helvetica, sans-serif;
+     background-color: white;
+     margin: 0;
+ }
 
-.mobile-container {
-    max-width: 480px;
-    margin: auto;
-    background-color: #555;
-    height: 500px;
-    color: white;
-    border-radius: 10px;
-}
+ .mobile-container {
+     display: grid;
+     grid-template-columns: 1fr;
+     background-color: white;
+     color: black;
+     border-radius: 10px;
+     height: auto;
+ }
+
+ .content-grid {
+     display: grid;
+     grid-template-columns: 1fr 1fr;
+     grid-auto-flow: row;
+     grid-gap: 10px;
+     margin: 10px;
+ }
+
+ .grid-item {
+     padding: 10px;
+     background-color: lightcoral;
+     display: flex;
+     flex-direction: column;
+ }
+
+ .grid-item-text {
+     margin-bottom: 10px;
+
+ }
+
+ .grid-item-image {
+     width: 100%;
+     height: 100%;
+     object-fit: cover
+ }
+
+ .grid-link {
+     height: 100%
+ }
+
+ /* Style the navigation menu */
+ .topnav {
+     overflow: hidden;
+     background-color: #333;
+     position: relative;
+ }
+
+ /* Hide the links inside the navigation menu (except for logo/home) */
+ .topnav #myLinks {
+     display: none;
+ }
+
+ /* Style navigation menu links */
+ .topnav a {
+     color: white;
+     padding: 14px 16px;
+     text-decoration: none;
+     font-size: 12px;
+     display: block;
+ }
+
+ /* Style the hamburger menu */
+ .topnav a.icon {
+     background: black;
+     display: block;
+     position: absolute;
+     right: 0;
+     top: 0;
+ }
+
+ /* Add a grey background color on mouse-over */
+ .topnav a:hover {
+     background-color: #ddd;
+     color: grey;
+ }
+
+ /* Style the active link (or home/logo) */
+ .active {
+     background-color: #FFB4AF;
+     color: black;
+ }
+
+ a {
+     text-decoration: none;
+     display: inline-block;
+     /* padding: 18px 26px;*/
+ }
+
+ a:hover {
+     background-color: #ddd;
+     color: black;
+ }
 
 
-/* Hide the links inside the navigation menu (except for logo/home) */
-.topnav #myLinks {
-    display: none;
-}
 
-/* Style navigation menu links */
-.topnav a {
-    color: white;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 12px;
-    display: block;
-}
+ @media screen and (min-width: 600px) {
+     .image-container {
+         width: 20%;
+     }
 
-/* Style the hamburger menu */
-.topnav a.icon {
-    background: black;
-    display: block;
-    position: absolute;
-    right: 0;
-    top: 0;
-}
+     .content-grid {
+         /*         SET YOUR GUTTERS HERE*/
+         margin-left: 20%;
+         margin-right: 20%;
 
-/* Add a grey background color on mouse-over */
-.topnav a: hover {
-    background-color: #ddd;
-    color: black;
-}
+     }
 
-/* Style the active link (or home/logo) */
-.active {
-    background-color: #4CAF50;
-    color: white;
-}
-
-/* Add this to your CSS - Structure for your site */
-.wrapper {
-    width: 100%;
-    overflow: auto;
-    /* This clears the float */
-}
-
-.container {
-    width: 560px;
-    margin: 0 auto;
-    /* This centers the <div> */
-}
-
-.content {
-    float: left;
-    /* pushes the columns to one line */
-}
-
-display: grid;
-grid-template-columns: 1fr 1fr;
-width: 100%;
+ }
 
 
-#outer-grid {
-    display: grid;
-    grid-template-rows: 1fr 1fr;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 8px;
-}
+ .previous {
+     background-color: #FFB4AF;
+     color: black;
+ }
 
-#outer-grid > div {
-    background-color: limegreen;
-    color: white;
-    font-size: 4vw;
-    padding: 8px;
-}
+ .round {
+     border-radius: 20%;
+ }
 
-#inner-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 5px;
-}
 
-#inner-grid > div {
-    background: lightgreen;
-    padding: 8px;
-}
+ /* Add this to your CSS - Structure for your site */
+ .wrapper {
+     width: 100%;
+     overflow: auto;
+     /* This clears the float */
+ }
 
-ul {
-    display: grid;
-    grid: auto-flow / auto 1fr;
-}
 
-li {
-    grid-column: span 2;
-    display: grid;
-    grid: subgrid;
-    border: solid;
-}
+ .content {
+     float: left;
+     /* pushes the columns to one line */
+ }
 
-label {
-    grid-column: 1;
-}
 
-input {
-    grid-column: 2;
-}
+
+ .headline {
+     padding-left: 20px;
+ }
+
+ /*
+ body {
+     padding: 20px 20px;
+ }
+
+
+ .image-grid {
+     display: flex;
+     flex-wrap: wrap;
+ }
+
+ .image-container {
+     background-color: firebrick;
+     width: 25%;
+     display: inline-block;
+ }
+
+ .image-padding {
+     margin: 5px;
+ }
+
+ .image {
+     width: 100%;
+ }
+*/
+
+ /*
+ #outer-grid {
+     display: grid;
+     grid-template-rows: 1fr 1fr;
+     grid-template-columns: 1fr 1fr;
+     grid-gap: 8px;
+ }
+
+ #outer-grid > div {
+     background-color: #FFCC9D;
+     color: white;
+     font-size: 3vw;
+     padding: 8px;
+ }
+
+ #inner-grid {
+     display: grid;
+     grid-template-columns: 1fr 1fr;
+     grid-gap: 5px;
+ }
+
+ #inner-grid > div {
+     background: ghostwhite;
+     padding: 1px;
+ }
+
+ ul {
+     display: grid;
+     grid: auto-flow / auto 1fr;
+ }
+
+ li {
+     grid-column: span 2;
+     display: grid;
+     border: solid;
+ }
+
+ label {
+     grid-column: 1;
+ }
+
+ input {
+     grid-column: 2;
+ }
+*/
+
+
+ input[type=text],
+ select,
+ textarea {
+     width: 100%;
+     /* Full width */
+     padding: 12px;
+     /* Some padding */
+     border: 1px solid #ccc;
+     /* Gray border */
+     border-radius: 4px;
+     /* Rounded borders */
+     box-sizing: border-box;
+     /* Make sure that padding and width stays in place */
+     margin-top: 6px;
+     /* Add a top margin */
+     margin-bottom: 16px;
+     /* Bottom margin */
+     resize: vertical
+         /* Allow the user to vertically resize the textarea (not horizontally) */
+ }
+
+ .mobile-container-contact {
+     max-width: 480px;
+     margin: auto;
+     background-color: #555;
+     height: 500px;
+     color: black;
+     border-radius: 10px;
+ }
+
+
+ /* Style the submit button with a specific background color etc */
+ input[type=submit] {
+     background-color: #4CAF50;
+     color: white;
+     padding: 12px 20px;
+     border: none;
+     border-radius: 4px;
+     cursor: pointer;
+ }
+
+ /* When moving the mouse over the submit button, add a darker green color */
+ input[type=submit]:hover {
+     background-color: #45a049;
+ }
+
+ /* Add a background color and some padding around the form */
+ .container {
+     border-radius: 5px;
+     background-color: #f2f2f2;
+     padding: 20px;
+ }
+
+ /*
+ #outer-grid-2 {
+     display: grid;
+     grid-template-rows: 1fr;
+     grid-template-columns: 1fr;
+     grid-gap: 8px;
+*/
+
+
+ /*
+ #outer-grid-2 > div {
+     color: white;
+     background-color: #FFCC9D;
+     font-size: 4vw;
+     padding: 8px;
+ }
+
+ #outer-grid-2 > a {
+     background-color: #FFCC9D;
+     padding: 8px;
+ }
+*/
+
+ /*
+
+ html {
+     height: auto;
+     margin: 0;
+ }
+*/
+
+
+ .weekly-special {
+     padding: 10px;
+     font-size: 13px;
+ }
+
+ h2.pos_center {
+     position: relative;
+     /*     left: 30px;*/
+ }
+
+ h3.pos_center {
+     position: relative;
+     /*     left: 30px;*/
+ }
+
+ .myRecipieParg {
+     padding-left: 25px !important;
+     padding-right: 25px !important;
+ }
+
+ #smoothie {
+     float: left;
+     margin-right: 10px;
+ }
